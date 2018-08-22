@@ -21,5 +21,38 @@ module.exports = {
     usedExports: true
     // concatenateModules: true,
     // occurrenceOrder: true // To keep filename consistent between different modes (for example building only)
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                [
+                  require.resolve('babel-preset-env'),
+                  {
+                    modules: false,
+                    useBuiltIns: true,
+                    targets: {
+                      browsers: [
+                        'Chrome >= 60',
+                        'Safari >= 10.1',
+                        'iOS >= 10.3',
+                        'Firefox >= 54',
+                        'Edge >= 15'
+                      ]
+                    }
+                  }
+                ]
+              ],
+              plugins: [['dynamic-import-webpack']]
+            }
+          }
+        ]
+      }
+    ]
   }
 };

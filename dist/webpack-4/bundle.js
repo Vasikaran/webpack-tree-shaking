@@ -207,10 +207,17 @@
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./chunk1.js */ "./src/chunk1.js"));
+new Promise(resolve => {
+  __webpack_require__.e(/*! require.ensure */ 0).then((require => {
+    resolve(__webpack_require__(/*! ./chunk1.js */ "./src/chunk1.js"));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+});
 
-__webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./chunk2.js */ "./src/chunk2.js"));
-
+new Promise(resolve => {
+  __webpack_require__.e(/*! require.ensure */ 1).then((require => {
+    resolve(__webpack_require__(/*! ./chunk2.js */ "./src/chunk2.js"));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+});
 
 /***/ })
 

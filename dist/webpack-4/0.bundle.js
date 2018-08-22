@@ -14,7 +14,6 @@ __webpack_require__.r(__webpack_exports__);
 
 Object(_common_js__WEBPACK_IMPORTED_MODULE_0__[/* module1 */ "a"])('Chunk-1');
 
-
 /***/ }),
 
 /***/ "./src/common.js":
@@ -28,14 +27,13 @@ Object(_common_js__WEBPACK_IMPORTED_MODULE_0__[/* module1 */ "a"])('Chunk-1');
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return module1; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return module2; });
-/*@__PURE__*/ let module1 = data => {
+/*@__PURE__*/let module1 = data => {
   console.log(data, 'module1');
 };
 
-/*@__PURE__*/ let module2 = data => {
+/*@__PURE__*/let module2 = data => {
   console.log(data, 'module2');
 };
-
 
 /***/ })
 
